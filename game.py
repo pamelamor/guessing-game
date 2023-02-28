@@ -10,16 +10,13 @@ randomNumber = random.randint(0, 100)
 # Prompt the user to pick a number between 1 and 100
 print(userName + ", I'm thinking of a number between 1 and 100.")
 print("Try to guess my number.")
-# Get user guess
-# userGuess = int(input("Your guess? "))
+
 
 
 def play_game():
     userGuess = int(input("Your guess? "))
     tries = 0
     while userGuess != randomNumber: 
-        print(userGuess)
-        print(randomNumber)
         if userGuess > randomNumber:
             tries += 1
             print("Your guess is too high, try again.")
