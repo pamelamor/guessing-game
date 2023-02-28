@@ -1,28 +1,28 @@
 import random
 """A number-guessing game."""
 
-# Put your code here
+# Prompt the user
 print("Howdy, what's your name?")
-print("(type in your name)")
-
-userName = input()
-
+# Get user name
+userName = input("(type in your name) ")
+# Prompt the user to pick a number between 1 and 100
 print(userName + ", I'm thinking of a number between 1 and 100.")
 print("Try to guess my number.")
-print("Your guess?")
-userGuess = int(input())
-
+# Get user guess
+userGuess = int(input("Your guess? "))
+# Choose a random number
 randomNumber = random.randint(0, 100)
 tries = 0
 
 while userGuess != randomNumber: 
+    
     if userGuess > randomNumber:
         tries += 1
         print("Your guess is too high, try again.")
     elif userGuess < randomNumber:
         tries += 1
         print("Your guess is too low, try again.")
-    userGuess = int(input())
+    userGuess = int(input("Your guess? "))
         
 if userGuess == randomNumber: 
     print("Well done, " + userName + "! You found my number in " + str(tries) + " tries!")
