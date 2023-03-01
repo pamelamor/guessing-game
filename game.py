@@ -1,19 +1,16 @@
 import random
 """A number-guessing game."""
 
-# Prompt the user
-print("Howdy, what's your name?")
-# Get user name
-userName = input("(type in your name) ")
-# Choose a random number
-randomNumber = random.randint(0, 100)
-# Prompt the user to pick a number between 1 and 100
-print(userName + ", I'm thinking of a number between 1 and 100.")
-print("Try to guess my number.")
-
-
-
 def play_game():
+    # Prompt the user for their name
+    print("Howdy, what's your name?")
+    # Get user name
+    userName = input("(type in your name) ")
+    # Choose a random number
+    randomNumber = random.randint(0, 100)
+    # Prompt the user to pick a number between 1 and 100
+    print(userName + ", I'm thinking of a number between 1 and 100.")
+    print("Try to guess my number.")
     userGuess = int(input("Your guess? "))
     tries = 0
     while userGuess != randomNumber: 
