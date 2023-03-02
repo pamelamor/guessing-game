@@ -10,8 +10,8 @@ def play_game():
     # Prompt the user to make a guess
     print(userName + ", I'm thinking of a number between " + lowerBound  + " and "  + higherBound  + ". Try to guess my number.")
     userGuess = int(input("Your guess? "))
-    tries = 0
-    
+    tries = 1
+
     while userGuess != randomNumber: 
         print(randomNumber)
         print(tries)
@@ -27,15 +27,24 @@ def play_game():
             print("Your guess is too low, try again.")
         userGuess = int(input("Your guess? "))
 
-        
+    
     if userGuess == randomNumber:
         print("Well done, " + userName + "! You found my number in " + str(tries) + " tries!")
-    
-    # Restart or start a new guessing round
+    # return tries
+# play_game()
+
+# Restart or start a new guessing round
+# def restart():
     anotherRound = input("Would you like to pay another round (Type 'Yes' or 'No')? ")
     if anotherRound == "Yes":
         play_game()
     else:
-        return
- 
+        return False
 play_game()
+# restart()
+
+# def high_score():
+#     score = play_game()
+#     while restart() == True
+ 
+
